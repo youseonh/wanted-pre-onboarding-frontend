@@ -67,7 +67,7 @@ export default function Todo() {
           onClick={onClickAdd}
         />
       </div>
-      <ul>
+      <ul className="overflow-y-scroll max-h-96">
         {list.map(item => {
           return <ToDoItem key={item.id} item={item} updateList={updateList} />
         })}
