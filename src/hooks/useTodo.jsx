@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-
-const BASE_URL = 'https://www.pre-onboarding-selection-task.shop/'
+import { BASE_URL } from '../constants/common'
 
 export default function useToDo(item) {
   const [todoData, setToDoData] = useState(item)
@@ -11,7 +10,7 @@ export default function useToDo(item) {
   }, [todoData])
 
   const handleRemove = async ({ id, token }) => {
-    const isConfirm = window.confirm(`${id}번 째 리스트를 삭제하시겠습니까?`)
+    const isConfirm = window.confirm(`${id}를 정말 삭제하시겠습니까? 복원이 불가능합니다.`)
     if (isConfirm) {
       await axios.delete(`${BASE_URL}todos/${id}`, {
         headers: {

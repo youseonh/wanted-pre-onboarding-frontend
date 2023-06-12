@@ -13,5 +13,6 @@ export function AuthProvider({ children }) {
   const handleLogout = () => {
     removeLocalStorage()
   }
+
   return <AuthContext.Provider value={{ token, handleLogin, handleLogout }}>{children}</AuthContext.Provider>
 }

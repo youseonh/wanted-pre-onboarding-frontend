@@ -1,6 +1,6 @@
 import React from 'react'
-import useForm from './hooks/useForm'
-import useSign from './hooks/useSign'
+import useForm from '../../hooks/useForm'
+import useSign from '../../hooks/useSign'
 import Button from './Button'
 
 export default function Form({ type }) {

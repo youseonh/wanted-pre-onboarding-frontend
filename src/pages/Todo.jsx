@@ -1,8 +1,8 @@
 import useNavigateToPage from '../hooks/useNavigateToPage'
 import { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../context/AuthContext'
-import ToDoItem from '../components/common/ToDoItem'
-import useToDoList from '../components/common/hooks/useTodoList'
+import ToDoItem from '../components/todo/ToDoItem'
+import useToDoList from '../hooks/useTodoList'
 
 export default function Todo() {
   const navigateToPage = useNavigateToPage()

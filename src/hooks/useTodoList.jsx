@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState, useContext } from 'react'
-import useLocalStorage from '../../../hooks/useLocalStorage'
-const BASE_URL = 'https://www.pre-onboarding-selection-task.shop/'
+import useLocalStorage from '../hooks/useLocalStorage'
+import { BASE_URL } from '../constants/common'
 
 export default function useToDoList() {
   const [todoList, setTodoList] = useState([])

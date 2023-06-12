@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from 'react'
 import { AuthContext } from '../../context/AuthContext'
-import useToDo from './hooks/useTodo'
+import useToDo from '../../hooks/useTodo'
 
 const ToDoItem = ({ item, updateList }) => {
   const { token } = useContext(AuthContext)
@@ -58,7 +58,7 @@ const ToDoItem = ({ item, updateList }) => {
 
   return (
     <li className="inline-flex w-full">
-      <label className="w-10/12 inline-flex mr-5">
+      <label className="w-9/12 inline-flex mr-5">
         <input id="toDoItem" type="checkbox" className="mr-4" checked={todo.isCompleted} onChange={changeCheck} />
         {/* 수정 여부에 따라? input : label */}
         {isEdit ? (
@@ -79,7 +79,7 @@ const ToDoItem = ({ item, updateList }) => {
           </>
         )}
       </label>
-      <div className="inline-flex w-2/12">
+      <div className="inline-flex w-3/12">
         {/* 수정 여부에 따라 버튼 변경 */}
         {isEdit ? (
           <>

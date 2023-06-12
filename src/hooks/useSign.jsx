@@ -1,7 +1,7 @@
 import axios from 'axios'
-import useNavigateToPage from '../../../hooks/useNavigateToPage'
+import useNavigateToPage from '../hooks/useNavigateToPage'
 import { useContext } from 'react'
-import { AuthContext } from '../../../context/AuthContext'
+import { AuthContext } from '../context/AuthContext'
 
 export default function useSign(type, data) {
   const navigateToPage = useNavigateToPage()
